@@ -1,6 +1,6 @@
 import Container from "@material-ui/core/Container";
-import Header from "../../components/Header/Header";
-import ProductList from "../Product/ProductList";
+import Header from "../header/Header";
+import ProductList from "../product/ProductList";
 
 const App: React.FC = (): JSX.Element => {
   return (

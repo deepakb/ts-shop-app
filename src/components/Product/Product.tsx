@@ -9,7 +9,6 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import { withStyles, Theme } from '@material-ui/core/styles';
-import {  } from '@material-ui/core/colors';
 import LocalGroceryStoreIcon from '@material-ui/icons/LocalGroceryStore';
 import ShowMoreText from 'react-show-more-text';
 import { ProductType } from './Product.types';

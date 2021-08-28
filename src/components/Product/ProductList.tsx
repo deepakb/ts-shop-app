@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import { useQuery } from 'react-query';
 import Product from './Product';
 import { ProductType } from './Product.types';
-import Loader from '../Loader/Loader';
+import Loader from '../loader/Loader';
 import { useStyles } from './Product.styles';
 
 const fetchProducts = async (): Promise<ProductType[]> => {
