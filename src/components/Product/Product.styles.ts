@@ -5,16 +5,16 @@ export const useStyles = makeStyles({
     maxWidth: 345
   },
   media: {
-    height: "100px"
+    height: '100px'
   },
   productList: {
-    marginTop: "2rem"
+    marginTop: '2rem'
   },
   productContainer: {
-    justifyContent: "center"
+    justifyContent: 'center'
   },
   actionContainer: {
-    display: "flex",
-    justifyContent: "space-between"
+    display: 'flex',
+    justifyContent: 'space-between'
   }
 });

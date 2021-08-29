@@ -24,7 +24,7 @@ const Loader: React.FC = (): JSX.Element => {
 
   return (
     <div className={classes.root}>
-      <LinearProgress variant="determinate" value={progress} />
+      <LinearProgress variant='determinate' value={progress} />
     </div>
   );
 };

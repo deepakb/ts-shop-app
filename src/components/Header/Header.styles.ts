@@ -1,33 +1,38 @@
-import { alpha, makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+import {
+  alpha,
+  makeStyles,
+  Theme,
+  createStyles
+} from '@material-ui/core/styles';
 
-export const useStyles = makeStyles((theme: Theme) =>
+export const useStyles = makeStyles((theme: Theme) => {
   createStyles({
     grow: {
-      flexGrow: 1,
+      flexGrow: 1
     },
     menuButton: {
-      marginRight: theme.spacing(2),
+      marginRight: theme.spacing(2)
     },
     title: {
       display: 'none',
       [theme.breakpoints.up('sm')]: {
-        display: 'block',
-      },
+        display: 'block'
+      }
     },
     search: {
       position: 'relative',
       borderRadius: theme.shape.borderRadius,
       backgroundColor: alpha(theme.palette.common.white, 0.15),
       '&:hover': {
-        backgroundColor: alpha(theme.palette.common.white, 0.25),
+        backgroundColor: alpha(theme.palette.common.white, 0.25)
       },
       marginRight: theme.spacing(2),
       marginLeft: 0,
       width: '100%',
       [theme.breakpoints.up('sm')]: {
         marginLeft: theme.spacing(3),
-        width: 'auto',
-      },
+        width: 'auto'
+      }
     },
     searchIcon: {
       padding: theme.spacing(0, 2),
@@ -36,10 +41,10 @@ export const useStyles = makeStyles((theme: Theme) =>
       pointerEvents: 'none',
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'center'
     },
     inputRoot: {
-      color: 'inherit',
+      color: 'inherit'
     },
     inputInput: {
       padding: theme.spacing(1, 1, 1, 0),
@@ -48,20 +53,20 @@ export const useStyles = makeStyles((theme: Theme) =>
       transition: theme.transitions.create('width'),
       width: '100%',
       [theme.breakpoints.up('md')]: {
-        width: '20ch',
-      },
+        width: '20ch'
+      }
     },
     sectionDesktop: {
       display: 'none',
       [theme.breakpoints.up('md')]: {
-        display: 'flex',
-      },
+        display: 'flex'
+      }
     },
     sectionMobile: {
       display: 'flex',
       [theme.breakpoints.up('md')]: {
-        display: 'none',
-      },
-    },
-  }),
-);
+        display: 'none'
+      }
+    }
+  });
+});
