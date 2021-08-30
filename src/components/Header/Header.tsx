@@ -13,11 +13,13 @@ import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import LocalGroceryStoreIcon from '@material-ui/icons/LocalGroceryStore';
-
 import { useStyles } from './Header.styles';
+import { useCart } from '../../context/cart-context';
 
 const Header: React.FC = (): JSX.Element => {
+  const { state } = useCart();
   const classes = useStyles();
+
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =
     React.useState<null | HTMLElement>(null);
@@ -72,8 +74,11 @@ const Header: React.FC = (): JSX.Element => {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <IconButton aria-label='show 4 new mails' color='inherit'>
-          <Badge badgeContent={4} color='secondary'>
+        <IconButton
+          aria-label={`show ${state.cart.length} items`}
+          color='inherit'
+        >
+          <Badge badgeContent={state.cart.length} color='secondary'>
             <ShoppingBasket />
           </Badge>
         </IconButton>
@@ -124,8 +129,11 @@ const Header: React.FC = (): JSX.Element => {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton aria-label='show 4 new mails' color='inherit'>
-              <Badge badgeContent={4} color='secondary'>
+            <IconButton
+              aria-label={`show ${state.cart.length} items`}
+              color='inherit'
+            >
+              <Badge badgeContent={state.cart.length} color='secondary'>
                 <ShoppingBasket />
               </Badge>
             </IconButton>

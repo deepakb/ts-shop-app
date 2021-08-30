@@ -22,6 +22,7 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': ['error'],
     'react/jsx-filename-extension': ['warn', { extensions: ['.tsx'] }],
     'react/jsx-props-no-spreading': 'off',
+    'react/jsx-curly-newline': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -36,6 +37,7 @@ module.exports = {
     'no-shadow': 'off',
     'object-curly-newline': [0],
     'arrow-body-style': [0],
+    'implicit-arrow-linebreak': [0],
     '@typescript-eslint/no-shadow': ['error'],
     '@typescript-eslint/explicit-function-return-type': [
       'error',

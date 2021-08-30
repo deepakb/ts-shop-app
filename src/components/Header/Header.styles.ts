@@ -6,7 +6,7 @@ import {
 } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles((theme: Theme) => {
-  createStyles({
+  return createStyles({
     grow: {
       flexGrow: 1
     },

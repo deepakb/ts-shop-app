@@ -13,7 +13,7 @@ const fetchProducts = async (): Promise<ProductType[]> => {
 };
 
 const useProducts = (): UseQueryResult<ProductType[], Error> => {
-  return useQuery<ProductType[], Error>('groups', fetchProducts);
+  return useQuery<ProductType[], Error>('products', fetchProducts);
 };
 
 const Alert = (props: AlertProps): JSX.Element => {

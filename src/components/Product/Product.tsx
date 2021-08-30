@@ -13,6 +13,7 @@ import LocalGroceryStoreIcon from '@material-ui/icons/LocalGroceryStore';
 import ShowMoreText from 'react-show-more-text';
 import { ProductType } from './Product.types';
 import { useStyles } from './Product.styles';
+import { useCart, ActionType } from '../../context/cart-context';
 
 interface ProductProps {
   product: ProductType;
@@ -29,6 +30,7 @@ const ColorButton = withStyles((theme: Theme) => ({
 }))(Button);
 
 const Product: React.FC<ProductProps> = ({ product }): JSX.Element => {
+  const { dispatch } = useCart();
   const classes = useStyles();
 
   return (
@@ -66,6 +68,9 @@ const Product: React.FC<ProductProps> = ({ product }): JSX.Element => {
             variant='contained'
             color='default'
             startIcon={<LocalGroceryStoreIcon />}
+            onClick={() =>
+              dispatch({ type: ActionType.addItemToCart, payload: product })
+            }
           >
             ADD TO CART
           </ColorButton>
